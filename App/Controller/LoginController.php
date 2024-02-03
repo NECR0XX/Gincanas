@@ -13,9 +13,5 @@ class LoginController {
     public function criarLogin($nome, $email, $senha) {
         $this->loginModel->criarLogin($nome, $email, $senha);
     }
-
-    public function listarlogins() {
-        return $this->loginModel->listarlogins();
-    }
 }
 ?>

@@ -21,10 +21,11 @@ $equipes = $equipeController->listarEquipes();
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wid_ativth=device-wid_ativth, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../Resources/Js/script.js"></script>
     <link rel="stylesheet" href="../../Resources/Css/equipa.css">
     <title>Equipes</title>
-    <script>
+        <script>
         function toggleSidebar() {
             var sidebar = document.getElementById('sidebar');
             var main = document.getElementById('main');
@@ -41,12 +42,12 @@ $equipes = $equipeController->listarEquipes();
 </head>
 <body>
     <div id="sidebar">
-        <?php
-            include '../../App/Providers/verifica_login.php'
-        ?>
-        <button id="log" onclick="logout()">Sair</button>
-        
-        <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3>
+        <?php if(isset($_SESSION['usuarioEmail']) && isset($_SESSION['usuarioNomedeUsuario'])): ?>
+            <button id="log" onclick="logout()">Sair</button>
+            <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3>
+        <?php else: ?>
+            <h3>Olá</h3>
+        <?php endif; ?>
         
         <a href="index.php">Index</a>
         <a href="gincana.php">Gincana</a>
@@ -56,6 +57,7 @@ $equipes = $equipeController->listarEquipes();
         <header>
             <span style="font-size:30px;cursor:pointer" onclick="toggleSidebar()">&#9776; Menu</span>
         </header>
+        <div class="light"></div>
         <form method="post">
             <input type="text" name="nome" placeholder="Nome da Equipe" required>
             <input type="text" name="participantes" placeholder="Participantes" required>
@@ -76,7 +78,7 @@ $equipes = $equipeController->listarEquipes();
                 <option value="O projetor de luz e a silhueta">O projetor de luz e a silhueta</option>
                 <option value="O relógio">O relógio</option>
             </select>
-            <button type="submit">Adicionar Usuário</button>
+            <button type="submit">Adicionar Equipe</button>
         </form>
     </div>
 </body>

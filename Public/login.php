@@ -18,10 +18,11 @@ session_start();
             endif;
         ?>
     </header>
+    <div class="light"></div>
     <section>
         <h1>The Backrooms</h1>
         <form action="../App/Providers/loginconfig.php" method="post">
-            <input type="text" name="email" placeholder="E-mail" required>
+            <input type="text" name="email" placeholder="E-mail ou Usuário" required>
             <input type="password" name="senha" placeholder="Senha" required>
             <button>Login</button>
         </form>

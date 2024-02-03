@@ -19,6 +19,7 @@ session_start();
         <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3><br>
         <button id="log" onclick="logout()">Sair</button></div><br><br>
     </header>
+    <div class="light"></div>
     <section>
         <a href="ativ.php">Gincanas</a><br>
         <a href="equip.php">Equipes</a><br>

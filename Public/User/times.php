@@ -30,12 +30,12 @@ $equipeController = new EquipeController($pdo);
 </head>
 <body>
     <div id="sidebar">
-        <?php
-            include '../../App/Providers/verifica_login.php'
-        ?>
-        <button id="log" onclick="logout()">Sair</button>
-        
-        <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3>
+        <?php if(isset($_SESSION['usuarioEmail']) && isset($_SESSION['usuarioNomedeUsuario'])): ?>
+            <button id="log" onclick="logout()">Sair</button>
+            <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3>
+        <?php else: ?>
+            <h3>Olá</h3>
+        <?php endif; ?>
         
         <a href="index.php">Index</a>
         <a href="gincana.php">Gincana</a>
@@ -46,12 +46,20 @@ $equipeController = new EquipeController($pdo);
         <header>
             <span style="font-size:30px;cursor:pointer" onclick="toggleSidebar()">&#9776; Menu</span>
         </header>
-
+        <div class="light"></div>
+        <img class="smile" src="../../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" alt=":D">
+        <img class="smile2" src="../../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" alt=":D">
         <div class="container">
+            <p>Nesta seção, destacamos as equipes intrépidas que se aventuraram nas profundezas das backrooms. 
+            Nas sombras da competição, desenrola-se um espetáculo de habilidades impressionantes, enquanto enfrentam desafios que desafiam os mais destemidos. 
+            Nosso ranking semanal reflete os pontos conquistados através de astúcia, coragem e, quem sabe, pactos sombrios.</p>
             <?php
                 $equipeController->exibirListaEquipesOrdenadasPorPontos();
             ?>
         </div>
+        <img class="smile3" src="../../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" alt=":D">
+        <img class="smile4" src="../../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" alt=":D">
+        <img class="smile5" src="../../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" alt=":D">
     </div>
 </body>
 </html>

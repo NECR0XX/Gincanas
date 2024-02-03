@@ -12,13 +12,5 @@ class LoginModel {
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$nome, $email, $senha, 2]);
     }
-
-    // Model para listar Logins
-    public function listarLogins() {
-        $sql = "SELECT * FROM login";
-        $stmt = $this->pdo->query($sql);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-    
 }
 ?>

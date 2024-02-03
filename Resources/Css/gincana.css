@@ -1,10 +1,10 @@
 body {
-    background-image: url('../../Resources/Assets/Backrooms_model.jpg');
+    background: whitesmoke;
     background-size: 100% 100%;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #dadada;
     color: #333;
     display: flex;
     height: 100vh;
@@ -50,35 +50,127 @@ body {
     padding: 20px;
     transition: margin-left 0.8s;
 }
+#main h3{
+    display: flex;
+    justify-content: center;
+    color: #333;
+}
+#main a{
+    text-decoration:underline;
+    color: #333;
+}
+#main a:hover{
+    text-decoration:underline;
+    color: #a82a2a;
+}
 
 .container {
-    max-width: 1200px; /* Ajuste a largura conforme necessário */
-    height: 450px;
+    max-width: 1200px;
+    height: 200px;
     margin: 20px auto;
-    background-color: #ffffff5c;
+    background-color: #58585850;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 80px;
+}
+.container p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #424242;
+    display: flex;
+    height: 167px;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.atividades {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px 0 0;
+    align-items: center;
 }
 
-.table-container {
-    flex: 1;
-}
-
-.container table {
-    font-size: 20px;
-}
-
-.activities-container {
+.atividades ul {
+    list-style-type: none;
+    width: 85%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.atividades li {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    background-color: #0000009f;
+    width: 500px;
+    height: 300px auto;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    animation: blink 10s infinite;
+    animation-delay: 4.5s;
+    pointer-events: none;
 }
 
-.activities-container tr {
-    flex-basis: calc(33.33% - 10px); /* Ajuste conforme necessário, subtraindo a margem */
-    margin-bottom: 10px;
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        background: linear-gradient(45deg, #00000029, #000000a2);
+    }
+    50% {
+        opacity: 0;
+        background: linear-gradient(45deg, #00000029, #000000a2);
+    }
+}
+img.smile{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 2%;
+    right: 2.5%;
+}
+img.smile2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 87%;
+}
+img.smile3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 82%;
+    right: 44%;
+}
+img.smile4{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 127%;
+    right: 77%;
+}
+img.smile5{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 117%;
+    right: 3%;
 }

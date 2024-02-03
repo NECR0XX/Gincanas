@@ -4,7 +4,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #dadada;
     color: #333;
     display: flex;
     height: 100vh;
@@ -57,6 +57,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
 }
 
 #main form input,
@@ -105,4 +106,26 @@ body {
 #main form select:focus {
     border-color: #2196F3;
     outline: none;
+}
+.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    animation: blink 10s infinite;
+    animation-delay: 4.5s;
+    pointer-events: none;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        background: linear-gradient(45deg, #00000029, #000000a2);
+    }
+    50% {
+        opacity: 0;
+        background: linear-gradient(45deg, #00000029, #000000a2);
+    }
 }
