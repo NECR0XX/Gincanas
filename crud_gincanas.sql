@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Fev-2024 às 03:12
+-- Tempo de geração: 03-Fev-2024 às 23:25
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -66,8 +66,7 @@ CREATE TABLE `equipes` (
 INSERT INTO `equipes` (`id_equipes`, `nome`, `participantes`, `cor`, `pontos`, `categoria`) VALUES
 (13, 'Dqdobp', 'Stefany, Ana, Melyssa e Régis', 'Preto', 9, 'Os 9 Cadáveres'),
 (14, 'GeralDeuaBunda', 'Fábio, Felipe, João, Ryan e Wesley', 'Vermelho', 13, 'O projetor de luz e a silhueta'),
-(15, 'Vôlei', 'Ferrer, Sido, Jonothas, Oliveira ', 'Azul', 5, 'O relógio'),
-(16, 'Pqp', 'Sla', 'Branco', 2, 'A TV');
+(15, 'Vôlei', 'Ferrer, Sido, Jonothas, Oliveira ', 'Azul', 5, 'O relógio');
 
 -- --------------------------------------------------------
 
@@ -89,7 +88,8 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`id`, `nome`, `email`, `senha`, `tipo_usuario`) VALUES
 (1, 'Adm', 'gincanas@gmail.com', 'qawsed', 1),
-(4, 'Wesley', 'carron@gmail.com', '12345', 2);
+(4, 'Wesley', 'carron@gmail.com', '12345', 2),
+(10, 'Mel', 'mel@gmail.com', 'mel', 2);
 
 --
 -- Índices para tabelas despejadas
@@ -127,13 +127,13 @@ ALTER TABLE `atividades`
 -- AUTO_INCREMENT de tabela `equipes`
 --
 ALTER TABLE `equipes`
-  MODIFY `id_equipes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_equipes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de tabela `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
