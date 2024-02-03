@@ -5,15 +5,16 @@ require_once '../../App/Controller/AtivController.php';
 $ativController = new AtivController($pdo);
 
 if (isset($_POST['nome']) &&
-    isset($_POST['regras'])) 
+    isset($_POST['regras']) &&
+    isset($_POST['data'])) 
 {
-    $ativController->criarAtiv($_POST['nome'], $_POST['regras']);
+    $ativController->criarAtiv($_POST['nome'], $_POST['regras'], $_POST['data']);
     header('Location: #');
 }
 
 // Atualiza Ativ
-if (isset($_POST['id_ativ']) && isset($_POST['atualizar_nome']) && isset($_POST['atualizar_regras'])) {
-    $ativController->atualizarAtiv($_POST['id_ativ'], $_POST['atualizar_nome'], $_POST['atualizar_regras']);
+if (isset($_POST['id_ativ']) && isset($_POST['atualizar_nome']) && isset($_POST['atualizar_regras']) && isset($_POST['atualizar_data'])) {
+    $ativController->atualizarAtiv($_POST['id_ativ'], $_POST['atualizar_nome'], $_POST['atualizar_regras'], $_POST['atualizar_data']);
 }
 
 // Excluir Ativ
@@ -42,6 +43,7 @@ $ativs = $ativController->listarAtivs();
     <form method="post">
         <input type="text" name="nome" placeholder="Nome Gincana" required>
         <textarea name="regras" cols="50" rows="5" placeholder="Regras" required></textarea>
+        <input type="datetime-local" name="data" required>
         <button type="submit">Adicionar Usuário</button>
     </form>
 
@@ -58,6 +60,7 @@ $ativs = $ativController->listarAtivs();
         </select>
         <input type="text" name="atualizar_nome" placeholder="Novo Nome Gincana" required>
         <textarea name="atualizar_regras" cols="50" rows="5" placeholder="Nova Regras" required></textarea>
+        <input type="datetime-local" name="atualizar_data" required>
         <button type="submit">Atualizar Atividade</button>
     </form>
 

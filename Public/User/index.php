@@ -17,11 +17,11 @@ session_start();
         ?>
         <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3>
         <button id="log" onclick="logout()">Sair</button></div>
-    </header>
-    <section>
         <a href="index.php">index</a><br>
         <a href="gincana.php">gincana</a><br>
         <a href="times.php">times</a>
+    </header>
+    <section>
         <h3>Venha fazer as gincanas com a gente <a href="gincana.php">clique aqui</a></h3>
     </section>
 </body>

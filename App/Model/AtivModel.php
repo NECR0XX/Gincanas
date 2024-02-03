@@ -7,10 +7,10 @@ class AtivModel {
     }
 
     // Model para criar Ativs
-    public function criarAtiv($nome, $regras) {
-        $sql = "INSERT INTO atividades (nome, regras) VALUES (?, ?)";
+    public function criarAtiv($nome, $regras, $data) {
+        $sql = "INSERT INTO atividades (nome, regras, data) VALUES (?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome, $regras]);
+        $stmt->execute([$nome, $regras, $data]);
     }
 
     // Model para listar Ativs
@@ -21,10 +21,10 @@ class AtivModel {
     }
 
     // Model para atualizar Ativs
-    public function atualizarAtiv($id_ativ, $nome, $regras){
-        $sql = "UPDATE atividades SET nome = ?, regras = ? WHERE id_ativ = ?";
+    public function atualizarAtiv($id_ativ, $nome, $regras, $data){
+        $sql = "UPDATE atividades SET nome = ?, regras = ?, data = ? WHERE id_ativ = ?";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome, $regras, $id_ativ]);
+        $stmt->execute([$nome, $regras, $data, $id_ativ]);
     }
     
     // Model para deletar Ativ

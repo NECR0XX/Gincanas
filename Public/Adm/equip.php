@@ -33,14 +33,7 @@ $equipes = $equipeController->listarEquipes();
     </header>
 
     <form method="post">
-        <input type="text" name="nome" placeholder="Nome da Equipe" required list="tit">
-            <datalist id="tit"><br>Escolha entre esses
-                <option value="Tigre">
-                <option value="Leão">
-                <option value="Crocodilo">
-                <option value="Zebra">
-                <option value="Arara">
-            </datalist>
+        <input type="text" name="nome" placeholder="Nome da Equipe" required>
         <input type="text" name="participantes" placeholder="Participantes" required>
         <input type="text" name="cor" placeholder="Cor" required list="cores">
             <datalist id="cores"><br>Escolha entre esses
@@ -52,14 +45,14 @@ $equipes = $equipeController->listarEquipes();
                 <option value="Amarelo">
                 <option value="Laranja">
             </datalist>
-        <input type="number" name="pontos" placeholder="Pontos" required>
-        <input type="text" name="categoria" placeholder="Categoria" required list="cat">
-            <datalist id="cat"><br>Escolha entre esses
-                <option value="Dança das cadeiras">
-                <option value="Cabo de guerra">
-                <option value="Caça ao tesouro">
-                <option value="Torta na cara">
-            </datalist>
+        <input type="number" name="pontos" placeholder="Pontos" min="0" max="100" required>
+        <select name="categoria" placeholder="Categoria" required>
+            <option value="">Escolha uma categoria</option>
+            <option value="A TV">A TV</option>
+            <option value="Os 9 Cadáveres">Os 9 Cadáveres</option>
+            <option value="O projetor de luz e a silhueta">O projetor de luz e a silhueta</option>
+            <option value="O relógio">O relógio</option>
+        </select>
         <button type="submit">Adicionar Usuário</button>
     </form>
 

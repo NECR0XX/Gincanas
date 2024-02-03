@@ -11,7 +11,7 @@
                     <tr>
                         <th>Nome</th>
                         <th>Regras</th>
-                        <th>Opções</th>
+                        <th>Data e Hora</th>
                     </tr>
                 </thead>
                 <?php foreach ($ativs as $ativ): ?>
@@ -19,7 +19,7 @@
                         <tr>
                             <td><?php echo $ativ['nome']; ?></td>
                             <td><?php echo $ativ['regras']; ?></td>
-                            <td><a href="../../Public/User/equipa.php">Montar equipe</a></td>
+                            <td><?php echo $ativ['data']; ?></td>
                         </tr>
                 <?php endforeach; ?>
                 <tbody>

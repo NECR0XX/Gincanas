@@ -10,8 +10,8 @@ class AtivController {
         $this->ativModel = new AtivModel($pdo);
     }
 
-    public function criarAtiv($nome, $regras) {
-        $this->ativModel->criarAtiv($nome, $regras);
+    public function criarAtiv($nome, $regras, $data) {
+        $this->ativModel->criarAtiv($nome, $regras, $data);
     }
 
     public function listarAtivs() {
@@ -23,8 +23,8 @@ class AtivController {
         include '../../Resources/View/atividade/lista.php';
     }
 
-    public function atualizarAtiv($id_ativ, $nome, $regras) {
-        $this->ativModel->atualizarAtiv($id_ativ, $nome, $regras);
+    public function atualizarAtiv($id_ativ, $nome, $regras, $data) {
+        $this->ativModel->atualizarAtiv($id_ativ, $nome, $regras, $data);
     }
     
     public function excluirAtiv ($id_ativ) {

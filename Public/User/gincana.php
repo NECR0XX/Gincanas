@@ -14,20 +14,21 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <header>
+<header>
         <?php
             include '../../App/Providers/verifica_login.php'
         ?>
         <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3>
-        <button id="log" onclick="logout()">Sair</button></div>
-    </header>
-    <section>
+        <button id="log" onclick="logout()">Sair</button></div><br>
         <a href="index.php">index</a><br>
         <a href="gincana.php">gincana</a><br>
         <a href="times.php">times</a>
+    </header>
+    <section>
         <?php
             $ativController->exibirListaAtivs();
         ?>
+        <h3>Quer participar? inscreva a sua <a href="equipa.php">equipe</a></h3>
     </section>
 </body>
 </html>
