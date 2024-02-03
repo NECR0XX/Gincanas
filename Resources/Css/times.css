@@ -1,0 +1,68 @@
+body {
+    background-image: url('../../Resources/Assets/Backrooms_model.jpg');
+    background-size: 100% 100%;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 0;
+    height: 100%;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.8s;
+    padding-top: 60px;
+    position: fixed;
+    z-index: 1;
+}
+
+#sidebar a,h3 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+#sidebar button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e359;
+    color: #000000;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -58px;
+    margin-left: 3px;
+}
+
+#main {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.8s;
+}
+
+.container {
+    max-width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    background-color: #ffffff45;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container table {
+    font-size: 20px;
+}

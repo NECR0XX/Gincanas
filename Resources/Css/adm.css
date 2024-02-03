@@ -1,0 +1,54 @@
+body {
+    background-image: url('../../Resources/Assets/nextbots-in-the-backrooms-el2t1.jpg');
+    background-size: 100% 100%;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+    border-radius: 5px;
+}
+
+header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#log {
+    background-color: #e0e359;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff45;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section a {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+section a:hover {
+    color: #000000;
+}

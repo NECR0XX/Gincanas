@@ -6,6 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Resources/Css/log_cad.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,7 +19,7 @@ session_start();
         ?>
     </header>
     <section>
-        <h1>Site Foda</h1>
+        <h1>The Backrooms</h1>
         <form action="../App/Providers/loginconfig.php" method="post">
             <input type="text" name="email" placeholder="E-mail" required>
             <input type="password" name="senha" placeholder="Senha" required>

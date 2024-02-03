@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../../Config/config.php';
 require_once '../../App/Controller/EquipeController.php';
 
@@ -21,37 +22,62 @@ $equipes = $equipeController->listarEquipes();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="wid_ativth=device-wid_ativth, initial-scale=1.0">
-    <link rel="stylesheet" href="Public/Css/style2.css">
-    <link rel="shortcut icon" href="Public/Assets/_31554896-b491-466e-b129-d77e088c3b0c-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../Resources/Css/equipa.css">
     <title>Equipes</title>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var main = document.getElementById('main');
+
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+                main.style.marginLeft = '0';
+            } else {
+                sidebar.style.width = '250px';
+                main.style.marginLeft = '250px';
+            }
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <a href="index.php">Voltar</a>
-        <h1>Equipes</h1>
-    </header>
-
-    <form method="post">
-        <input type="text" name="nome" placeholder="Nome da Equipe" required>
-        <input type="text" name="participantes" placeholder="Participantes" required>
-        <input type="text" name="cor" placeholder="Cor" required list="cores">
-            <datalist id="cores"><br>Escolha entre esses
-                <option value="Branco">
-                <option value="Preto">
-                <option value="Vermelho">
-                <option value="Verde">
-                <option value="Azul">
-                <option value="Amarelo">
-                <option value="Laranja">
-            </datalist>
-        <select name="categoria" placeholder="Categoria" required>
-            <option value="">Escolha uma categoria</option>
-            <option value="A TV">A TV</option>
-            <option value="Os 9 Cadáveres">Os 9 Cadáveres</option>
-            <option value="O projetor de luz e a silhueta">O projetor de luz e a silhueta</option>
-            <option value="O relógio">O relógio</option>
-        </select>
-        <button type="submit">Adicionar Usuário</button>
-    </form>
+    <div id="sidebar">
+        <?php
+            include '../../App/Providers/verifica_login.php'
+        ?>
+        <button id="log" onclick="logout()">Sair</button>
+        
+        <h3>Olá <?php echo $_SESSION['usuarioNomedeUsuario'], "!"; ?> </h3>
+        
+        <a href="index.php">Index</a>
+        <a href="gincana.php">Gincana</a>
+        <a href="times.php">Times</a>
+    </div>
+    <div id="main">
+        <header>
+            <span style="font-size:30px;cursor:pointer" onclick="toggleSidebar()">&#9776; Menu</span>
+        </header>
+        <form method="post">
+            <input type="text" name="nome" placeholder="Nome da Equipe" required>
+            <input type="text" name="participantes" placeholder="Participantes" required>
+            <input type="text" name="cor" placeholder="Cor" required list="cores">
+                <datalist id="cores"><br>Escolha entre esses
+                    <option value="Branco">
+                    <option value="Preto">
+                    <option value="Vermelho">
+                    <option value="Verde">
+                    <option value="Azul">
+                    <option value="Amarelo">
+                    <option value="Laranja">
+                </datalist>
+            <select name="categoria" placeholder="Categoria" required>
+                <option value="">Escolha uma categoria</option>
+                <option value="A TV">A TV</option>
+                <option value="Os 9 Cadáveres">Os 9 Cadáveres</option>
+                <option value="O projetor de luz e a silhueta">O projetor de luz e a silhueta</option>
+                <option value="O relógio">O relógio</option>
+            </select>
+            <button type="submit">Adicionar Usuário</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,0 +1,108 @@
+body {
+    background-image: url('../../Resources/Assets/Backrooms_model.jpg');
+    background-size: 100% 100%;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 0;
+    height: 100%;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.8s;
+    padding-top: 60px;
+    position: fixed;
+    z-index: 1;
+}
+
+#sidebar a,h3 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+#sidebar button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e359;
+    color: #000000;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -58px;
+    margin-left: 3px;
+}
+
+#main {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.8s;
+}
+#main form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff3b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#main form input,
+#main form select,
+#main form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#main form button {
+    background-color: #f4f660;
+    color: #000000;
+    cursor: pointer;
+}
+
+#main form button:hover {
+    background-color: #eaec6b;
+}
+
+#main form input[type="text"],
+#main form select {
+    height: 40px;
+}
+
+#main form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('path/to/arrow-icon.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+}
+
+#main form input[type="text"]::placeholder,
+#main form select::placeholder {
+    color: #999;
+}
+
+#main form input[type="text"]:focus,
+#main form select:focus {
+    border-color: #2196F3;
+    outline: none;
+}

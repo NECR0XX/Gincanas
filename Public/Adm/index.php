@@ -8,6 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../Resources/Js/script.js"></script>
+    <link rel="stylesheet" href="../../Resources/Css/adm.css">
     <title>Document</title>
 </head>
 <body>

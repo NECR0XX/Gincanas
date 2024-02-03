@@ -20,6 +20,7 @@ if (isset($_POST['nome'])
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Resources/Css/log_cad.css">
     <title>Document</title>
 </head>
 <body>
@@ -32,7 +33,7 @@ if (isset($_POST['nome'])
         ?>
     </header>
     <section>
-        <h1>Site Foda</h1>
+        <h1>The Backrooms</h1>
         <form method="post">
             <input type="nome" name="nome" placeholder="Usuário" required>
             <input type="email" name="email" placeholder="E-mail" required>

@@ -1,0 +1,36 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px 0;
+}
+
+label {
+    color: #333;
+}
+
+input, select, button {
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
