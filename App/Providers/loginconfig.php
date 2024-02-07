@@ -28,7 +28,7 @@ if (isset($_POST['email'])) {
         }
     } else {
         $_SESSION['nao_autenticado'] = true;
-        header('Location: ../Public/login.php');
+        header('Location: ../../Public/login.php');
         exit();
     }
 } 
