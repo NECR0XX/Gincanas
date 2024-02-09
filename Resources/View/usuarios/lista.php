@@ -13,7 +13,7 @@
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Senha</th>
-                        <th>Níveis de Permissão</th>
+                        <th>Níveis de Permissão <br> 1 - ADM; 2 - Usuário Normal</th>
                     </tr>
                 </thead>
                 <?php foreach ($users as $user): ?>
