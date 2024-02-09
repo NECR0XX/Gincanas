@@ -7,7 +7,9 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Resources/Css/log_cad.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" type="image/x-icon">
+    <script src="../Resources/Js/script.js"></script>
+    <title>The Backrooms</title>
 </head>
 <body>
     <header>

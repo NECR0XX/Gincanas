@@ -100,16 +100,3 @@ a:hover {
         background: linear-gradient(45deg, #000000ec, #000000ec);
     }
 }
-.alert {
-    display: none;
-    position: fixed;
-    top: 51.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #f44336;
-    color: white;
-    text-align: center;
-    border-radius: 8px;
-    z-index: 1000;
-  }

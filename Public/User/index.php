@@ -7,9 +7,10 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" type="image/x-icon">
     <link rel="stylesheet" href="../../Resources/Css/index.css">
     <script src="../../Resources/Js/script.js"></script>
-    <title>Document</title>
+    <title>The Backrooms</title>
     <script>
         function toggleSidebar() {
             var sidebar = document.getElementById('sidebar');
@@ -37,6 +38,7 @@ session_start();
         <a href="index.php">Index</a>
         <a href="gincana.php">Gincana</a>
         <a href="times.php">Times</a>
+        <a href="../login.php">Login</a>
     </div>
     <div id="main">
     <header>

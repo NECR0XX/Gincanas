@@ -30,6 +30,7 @@ $ativs = $ativController->listarAtivs();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="wid_ativth=device-wid_ativth, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Resources/Assets/dex66te-e97d5f90-5c30-4441-aaee-3905f1e2036d.png" type="image/x-icon">
     <link rel="stylesheet" href="../../Resources/Css/adm2.css">
     <title>Atividades</title>
 </head>
